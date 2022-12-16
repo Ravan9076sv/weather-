@@ -1,0 +1,43 @@
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <%- include("header") -%>
+  <main>
+    <div class="textArea">
+        <h2>Seeing the weather of the whole world with <b>Dark Weather!</b></h2>
+    </div>
+    <div class="cityName">
+      <form action="/" method="post">
+        <input value="<%= city %>" name="cityName" placeholder="<%= cityName %>" type="text">
+        <button class="glassButton">GO!</button>
+      </form>
+      <div class="creditSection">
+        <h4>MADE WITH </h4><a href="https://www.instagram.com/ravan9076sv">❤️</a>
+      </div>
+    </div>
+    <div class="cardSection">
+      <div class="card">
+      <div class="weatherIcon">
+           <img src="<%= weatherIcon %>"  alt="">
+      </div>
+      <div class="weatherInfo">
+          <h3> <%= city %>: <span><%= temp %></span>°C</h3>
+          <div>Wind Speed: <span><%= speed %> </span> kmph</div>
+          <div>Humidity: <span><%= humidity %></span>%</div>
+          <div>Weather: <%= weather %></div>
+      </div>
+      </div>
+  </div>
+  </main>
+</body>
+

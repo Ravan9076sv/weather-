@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+a{
+    color: rgb(24, 118, 141);
+}
+
+body {
+  background-color: #24343d;
+  font-size: 16px;
+  color: #ffffff;
+  display:grid;
+  grid-template-rows:20% 80%;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'JetBrains Mono', monospace;
+
+}
+header {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  /* border: 2px solid red; */
+  justify-content: space-around;
+  align-items: center;
+}
+main {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer {
+  height: 60%;
+  width: 40%;
+  font-size: 1em;
+}
+.formContainer form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.formContainer form input {
+  outline: none;
+  border: none;
+  min-height: 80%;
+  min-width: 40%;
+  text-align: start;
+  padding: 1em;
+  background: #fafeff0f;
+  border-radius: 10px;
+}
+.formContainer form input::placeholder {
+  color: white;
+  /* opacity: 0.3; */
+}
+.textArea {
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  text-align: center;
+  align-items: center;
+  height: 30%;
+  margin: 0 auto;
+  /* border:2px solid red; */
+}
+.textArea b {
+  font-size: 1.3em;
+  color:black;
+  font-weight: bolder;
+  background: linear-gradient(to right,rgba(202, 236, 255, 1),rgba(120, 207, 255, 1) );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.cityName {
+  margin-top: 1em;
+  height: 10%;
+  width: 100%;
+  font-size: 1em;
+  display: flex;
+  /* border: 2px solid red; */
+}
+.cityName form {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cityName form input {
+  outline: none;
+  border: none;
+  height: 70%;
+  width: 40%;
+  text-align: start;
+  padding: 1em;
+  background: #fafeff0f;
+  border-radius: 10px;
+  color: white;
+}
+.cityName form input::placeholder{
+  opacity: 1;
+  color:white;
+}
+.creditSection {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+  font-size: 2em;
+  gap: 1%;
+}
+/* Button Section */
+.glassButton {
+  padding: 1em;
+  margin-left: 0.5em;
+  backdrop-filter: blur(30px);
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  text-transform: uppercase;
+  background: inherit;
+  border-radius: 10px;
+  border: 1px solid rgba(43, 43, 43, 0.568);
+  /* position: absolute; */
+}
+.glassButton::before{
+    position: absolute;
+    content: '';
+    background: inherit;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 10px;
+    border: 1px solid #fafeff0f;
+}
+
+.glassButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.cardSection{
+    height: 60%;
+    width: 100%;
+    display:flex;
+    margin: 0 auto;
+    justify-content:center;
+    align-items: center;
+}
+.card {
+  height:100%;
+  width: 15%;
+  background: inherit;
+  border-radius: 15px;
+  border: 1px solid rgba(43, 43, 43, 0.568);
+  position: relative;
+
+}
+.card::before{
+    position: absolute;
+    content: '';
+    background: inherit;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* border-radius: 15px; */
+    /* border: 1px solid #fafeff0f; */
+    background: #24353E;
+    border: 1px solid #1a2f3b;
+box-shadow: 10px 9px 70px rgba(36, 53, 62, 0.4);
+border-radius: 20px;
+z-index: -8;
+}
+.weatherIcon{
+  height: 40%;
+  width: 100%;
+}
+#Layer_1{
+  position: absolute;
+  height: 8em;
+  width: 14em;
+  top:-3em;
+  left: 3em;
+
+
+}
+
+.weatherInfo{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-left: 1em;
+}
+
+input{
+  color: red;
+}
+
+@media (max-width:425px) {
+  body{
+    font-size: 12px;
+  }
+  header{
+    flex-direction: column;
+  }
+  .formContainer{
+    width: 80%;
+    height: 40%;
+  }
+  .formContainer form input{
+    width: 100%;
+  }
+  .formContainer form{
+    justify-content: center;
+  }
+  .textArea{
+    width: 80%;
+  }
+  .cityName{
+    flex-direction: column;
+    height: 25%;
+
+    gap: 1em;
+  }
+  .cityName form, .creditSection{
+    width: 100%;
+  }
+  .cardSection{
+    height: 55%;
+  }
+  .card{
+    width: 40%;
+  }
+}
